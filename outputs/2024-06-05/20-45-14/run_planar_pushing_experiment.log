@@ -1,0 +1,121 @@
+[2024-06-05 20:45:14,241][__main__][INFO] - sim_config:
+  visualize_desired: true
+  draw_frames: true
+  time_step: 0.005
+  use_realtime: true
+  delay_before_execution: 3
+  closed_loop: true
+  save_plots: true
+  scene_directive_name: planar_pushing_iiwa_plant_hydroelastic.yaml
+  use_hardware: true
+  pusher_z_offset: 0.03
+  default_joint_positions:
+  - 0.0776
+  - 1.0562
+  - 0.3326
+  - -1.3048
+  - 2.7515
+  - -0.8441
+  - 0.5127
+mpc_config:
+  _target_: planning_through_contact.simulation.controllers.hybrid_mpc.HybridMpcConfig
+  step_size: 0.06
+  horizon: 20
+  num_sliding_steps: 1
+  rate_Hz: 50
+  Q:
+  - 3
+  - 3
+  - 0.01
+  - 0
+  Q_scaling: 100
+  Q_N:
+  - 3
+  - 3
+  - 0.01
+  - 0
+  Q_N_scaling: 2000
+  R:
+  - 1
+  - 1
+  - 0.01
+  R_scaling: 0.5
+  u_max_magnitude:
+  - 4
+  - 4
+  - 2
+  lam_max: 0.8
+  lam_min: 0.2
+optitrack_config:
+  _target_: planning_through_contact.simulation.sensors.optitrack_config.OptitrackConfig
+  iiwa_id: 4
+  slider_id: 10
+  p_W_pB:
+  - 0.3
+  - -0.04285714
+  - 0.019528
+  R_W_oB:
+  - 0.0014019521180919092
+  - 0.0017132056231440778
+  - 2.5206443933848894
+  p_W_oB:
+  - 0.30213178
+  - -0.05107934
+  - 0.02950026
+realsense_config:
+  realsense_camera_config:
+    _target_: planning_through_contact.simulation.sensors.realsense_camera_config.RealsenseCameraConfig
+    width: 640
+    height: 480
+    fps: 30
+  should_record: true
+  camera1_name: camera_top
+  camera1_serial_number: '822512060233'
+  camera2_name: camera_front
+  camera2_serial_number: '818312071101'
+  camera3_name: camera_side
+  camera3_serial_number: '802212061325'
+trajectory_set_name: hw_demos_20240207195018_tee_seed_0
+trajectory_index: 7
+use_rounded: true
+save_experiment_data: true
+log_dir: 2024-06-05/20-45-14
+
+[2024-06-05 20:45:14,730][drake][WARNING] - Differential IK started returning status:"stuck" at time 0.
+[2024-06-05 20:45:14,732][planning_through_contact.simulation.environments.table_environment][INFO] - t=0.0
+[2024-06-05 20:45:14,741][drake][WARNING] - Differential IK started finding solutions again at time 0.005.
+[2024-06-05 20:45:15,742][planning_through_contact.simulation.planar_pushing.iiwa_planner][DEBUG] - PlanGoPushStart at time 0.6000000000000001.
+[2024-06-05 20:45:15,756][planning_through_contact.simulation.planar_pushing.iiwa_planner][DEBUG] - q_start = [-0.2136  0.7554  0.2475 -2.0659  2.6645 -0.3753  0.4168]
+[2024-06-05 20:45:15,756][planning_through_contact.simulation.planar_pushing.iiwa_planner][DEBUG] - q_goal = [-0.2136  0.7554  0.2475 -2.0659  2.6645 -0.3753  0.4168]
+[2024-06-05 20:45:16,060][planning_through_contact.simulation.planar_pushing.iiwa_planner][DEBUG] - Switching to WAIT_PUSH mode at time 0.7000000000000001.
+[2024-06-05 20:45:16,061][planning_through_contact.simulation.planar_pushing.iiwa_planner][DEBUG] - Current position: [-0.2138  0.7498  0.2489 -2.0632  2.665  -0.3775  0.4167]
+[2024-06-05 20:45:17,810][planning_through_contact.simulation.planar_pushing.iiwa_planner][DEBUG] - Switching to PUSHING mode at time 1.7000000000000002.
+[2024-06-05 20:45:17,810][planning_through_contact.simulation.planar_pushing.iiwa_planner][DEBUG] - Current position: [-0.2138  0.7498  0.2489 -2.0631  2.665  -0.3775  0.4167]
+[2024-06-05 20:45:23,012][planning_through_contact.simulation.environments.table_environment][INFO] - t=5.0
+[2024-06-05 20:45:27,299][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Transitioning to HYBRID_MPC state at time 7.0
+[2024-06-05 20:45:27,301][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Resetting accumulator at time 7.0
+[2024-06-05 20:45:40,831][planning_through_contact.simulation.environments.table_environment][INFO] - t=10.0
+[2024-06-05 20:45:51,023][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Transitioning to CFREE_MPC state at time 12.0
+[2024-06-05 20:45:57,605][planning_through_contact.simulation.environments.table_environment][INFO] - t=15.0
+[2024-06-05 20:46:03,919][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Transitioning to HYBRID_MPC state at time 18.0
+[2024-06-05 20:46:03,923][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Resetting accumulator at time 18.0
+[2024-06-05 20:46:14,469][planning_through_contact.simulation.environments.table_environment][INFO] - t=20.0
+[2024-06-05 20:46:29,382][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Transitioning to CFREE_MPC state at time 23.0
+[2024-06-05 20:46:33,428][planning_through_contact.simulation.environments.table_environment][INFO] - t=25.0
+[2024-06-05 20:46:37,442][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Transitioning to HYBRID_MPC state at time 27.0
+[2024-06-05 20:46:37,445][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Resetting accumulator at time 27.0
+[2024-06-05 20:46:52,131][planning_through_contact.simulation.environments.table_environment][INFO] - t=30.0
+[2024-06-05 20:47:02,361][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Transitioning to CFREE_MPC state at time 32.0
+[2024-06-05 20:47:08,912][planning_through_contact.simulation.environments.table_environment][INFO] - t=35.0
+[2024-06-05 20:47:15,267][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Transitioning to HYBRID_MPC state at time 38.0
+[2024-06-05 20:47:15,270][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Resetting accumulator at time 38.0
+[2024-06-05 20:47:25,674][planning_through_contact.simulation.environments.table_environment][INFO] - t=40.0
+[2024-06-05 20:47:42,454][planning_through_contact.simulation.planar_pushing.pusher_pose_controller][DEBUG] - Transitioning to CFREE_MPC state at time 43.0
+[2024-06-05 20:47:47,201][planning_through_contact.simulation.environments.table_environment][INFO] - t=45.0
+[2024-06-05 20:47:58,374][planning_through_contact.simulation.environments.table_environment][INFO] - t=50.0
+[2024-06-05 20:48:00,655][planning_through_contact.simulation.environments.table_environment][INFO] - 
+SUMMARY:
+ last planar pose: [ 0.5589 -0.0436  0.1016]
+ last desired planar pose: [ 0.575  -0.0429  0.    ]
+ error: [-0.0161 -0.0007  0.1016]
+ error norm: 0.1029

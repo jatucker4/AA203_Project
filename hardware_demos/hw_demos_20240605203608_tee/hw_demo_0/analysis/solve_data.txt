@@ -1,0 +1,61 @@
+relaxed_gcs_cost: 32.44657919705308
+relaxed_gcs_success: True
+relaxed_gcs_time: 117.63650526399942
+binary_flows_cost: 32.44657919705308
+binary_flows_success: True
+binary_flows_time: 117.63650526399942
+feasible_cost: None
+feasible_success: False
+feasible_time: None
+relaxed_mean_determinant: 0.9814274049272548
+rounded_mean_determinant: 1.0000000154465238
+start_and_goal: slider_initial_pose: x: 0.6200757681078192, y: 0.03991890509477253, theta: 0.6258750760598821
+slider_target_pose: x: 0.575, y: -0.04285714, theta: 0
+pusher_initial_pose: x: 0.39999999999999997, y: 0, theta: 0
+pusher_target_pose: x: 0.39999999999999997, y: 0, theta: 0
+config: start_and_goal: slider_initial_pose: x: 0.6200757681078192, y: 0.03991890509477253, theta: 0.6258750760598821
+slider_target_pose: x: 0.575, y: -0.04285714, theta: 0
+pusher_initial_pose: x: 0.39999999999999997, y: 0, theta: 0
+pusher_target_pose: x: 0.39999999999999997, y: 0, theta: 0
+num_knot_points_contact: 3
+num_knot_points_non_collision: 5
+time_in_contact: 5.0
+time_non_collision: 2.0
+continuity_on_pusher_velocity: True
+allow_teleportation: False
+use_eq_elimination: False
+use_entry_and_exit_subgraphs: True
+no_cycles: False
+workspace: None
+dynamics_config: SliderPusherSystemConfig(slider=RigidBody(name='t_pusher', geometry=TPusher2d(box_1=Box2d(width=0.2, height=0.05), box_2=Box2d(width=0.05, height=0.15)), mass=0.1, is_actuated=False), pusher_radius=0.015, friction_coeff_table_slider=0.3, friction_coeff_slider_pusher=0.1, grav_acc=9.81, integration_constant=0.3, force_scale=0.01)
+use_band_sparsity: True
+non_collision_cost: distance_to_object_quadratic_preferred_distance: 0.2
+distance_to_object_quadratic: None
+distance_to_object_socp: 0.25
+distance_to_object_socp_single_mode: None
+pusher_velocity_regularization: 10.0
+pusher_arc_length: 5.0
+time: None
+contact_config: cost: cost_type: ContactCostType.STANDARD
+keypoint_arc_length: 10.0
+linear_arc_length: None
+angular_arc_length: None
+force_regularization: 100000.0
+keypoint_velocity_regularization: 100.0
+ang_velocity_regularization: None
+lin_velocity_regularization: None
+mode_transition_cost: None
+trace: None
+time: 1.0
+lam_min: 0.25
+lam_max: 0.75
+delta_theta_max: None
+delta_vel_max: None
+use_approx_exponential_map: False
+num_binary_rounded_paths: 1
+num_feasible_rounded_paths: 0
+solver_params: PlanarSolverParams(rounding_steps=100, max_rounding_trials=10000, gcs_convex_relaxation=True, print_flows=False, assert_determinants=False, assert_result=False, assert_nan_values=True, print_solver_output=True, save_solver_output=False, measure_solve_time=True, max_mosek_solve_time=300.0, print_path=False, print_cost=True, print_rounding_details=True, solver='mosek', get_rounded_and_original_traj=False, nonl_round_major_feas_tol=1e-05, nonl_round_minor_feas_tol=1e-05, nonl_round_opt_tol=1e-05, nonl_round_major_iter_limit=10000, assert_rounding_res=False, sol_retrieval='first_row')
+name: None
+cost_term_vals: {'contact_mode_costs': {'keypoint_arc': [1.2770328350882623], 'keypoint_reg': [0.9286652318208795], 'angular_vel_reg': [0.0], 'translational_vel_reg': [0.0], 'force_reg': [2.002488715646924], 'contact_time': [5.0], 'mode_cost': [0.0]}, 'contact_mode_sums': {'keypoint_arc': 1.2770328350882623, 'keypoint_reg': 0.9286652318208795, 'angular_vel_reg': 0.0, 'translational_vel_reg': 0.0, 'force_reg': 2.002488715646924, 'contact_time': 5.0, 'mode_cost': 0.0}, 'non_collision_costs': {'pusher_arc_length': [0.0, 0.1782603059221619, 1.3975696389437404, 1.3201544709647852, 0.25325374133456213, 0.0], 'pusher_vel_reg': [0.0, 0.006532393089754895, 0.31132465772450013, 0.2688502508421385, 0.020192826430044622, 0.0], 'object_avoidance_socp': [0.0, 2.3723679790235916, 2.8371326204784424, 2.8475662254355725, 2.3534774238724805, 0.0], 'object_avoidance_quad': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'non_contact_time': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}, 'non_collision_sums': {'pusher_arc_length': 3.1492381571652497, 'pusher_vel_reg': 0.6069001280864381, 'object_avoidance_socp': 10.410544248810087, 'object_avoidance_quad': 0.0, 'non_contact_time': 0.0}}
+optimality_gap: None
+sdp_optimality_gap: 0.0

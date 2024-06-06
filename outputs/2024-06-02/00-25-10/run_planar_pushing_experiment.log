@@ -1,0 +1,20 @@
+[2024-06-02 00:25:10,531][__main__][INFO] - visualize_desired: true
+draw_frames: true
+time_step: 0.001
+use_realtime: false
+delay_before_execution: 3
+closed_loop: false
+save_plots: true
+scene_directive_name: planar_pushing_iiwa_plant_hydroelastic.yaml
+use_hardware: false
+pusher_z_offset: 0.03
+default_joint_positions:
+- 0.0776
+- 1.0562
+- 0.3326
+- -1.3048
+- 2.7515
+- -0.8441
+- 0.5127
+log_dir: 2024-06-02/00-25-10
+
